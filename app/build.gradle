@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.rxkj.wananpovertyaid"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+        signingConfigs {
+            release {
+//
+                keyAlias '外勤管家'
+                keyPassword 'xjl2011'
+                storeFile file('/Users/chiachi/AndroidStudioProjects/key.keystore')
+                storePassword 'xjl2011'
+                //
+            }
+            debug {
+                keyAlias '外勤管家'
+                keyPassword 'xjl2011'
+                storeFile file('/Users/chiachi/AndroidStudioProjects/key.keystore')
+                storePassword 'xjl2011'
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+        //, project(':faceplatform').file('libs'), project(':faceplatform-ui').file('libs')
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(path: ':RLibs')
+
+    //解决Error: Cannot fit requested classes in a single dex file (# methods: 67667 > 65536
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation 'com.jakewharton:butterknife:10.2.3'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.3'
+
+    //图标冒泡通知
+    implementation 'me.leolin:ShortcutBadger:1.1.21@aar'
+
+    //阿里路由
+    implementation 'com.alibaba:arouter-api:1.5.0'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    implementation 'com.akexorcist:RoundCornerProgressBar:2.0.3'
+
+    implementation 'com.youth.banner:banner:2.1.0'
+
+    //生成二维码、扫描二维码、识别图片二维码
+//    implementation 'cn.bingoogolapple:bga-adapter:1.1.5@aar'
+//    implementation 'cn.bingoogolapple:bga-photopicker:1.2.3'
+
+    //沉浸式状态栏
+//    implementation 'com.gyf.barlibrary:barlibrary:2.3.0'
+//    implementation 'cn.jiguang.sdk:jpush:3.7.0'
+//    implementation 'cn.jiguang.sdk:jcore:2.4.2'
+
+
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="4dp"
+    android:elevation="1dp"
+    android:background="#FAFAFA"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="10dp"
+            android:text="权限申请"
+            android:textSize="17sp"
+            android:layout_alignParentTop="true"
+            android:textColor="#53575a"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_info"
+            android:textSize="15sp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="normal"
+            android:textColor="#555555"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/open"
+            android:text="一键开启"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="#FAFAFA"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/shape_corner_5dp_blue"
+            android:layout_width="match_parent"
+            android:layout_height="45dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

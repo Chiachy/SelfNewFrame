@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--进度条-->
+    <declare-styleable name="UpdateAppNumberProgressBar">
+        <attr name="progress_current" format="integer" />
+        <attr name="progress_max" format="integer" />
+
+        <attr name="progress_unreached_color" format="color" />
+        <attr name="progress_reached_color" format="color" />
+
+        <attr name="progress_reached_bar_height" format="dimension" />
+        <attr name="progress_unreached_bar_height" format="dimension" />
+
+        <attr name="progress_text_size" format="dimension" />
+        <attr name="progress_text_color" format="color" />
+
+        <attr name="progress_text_offset" format="dimension" />
+
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+    <!--底部导航栏自定义属性-->
+    <declare-styleable name="BottomBar">
+        <attr name="bar_textsize" format="dimension" />
+        <attr name="bar_text_select_color" format="color" />
+        <attr name="bar_text_unselect_color" format="color" />
+        <attr name="bar_icon_width" format="dimension" />
+        <attr name="bar_icon_height" format="dimension" />
+        <attr name="bar_badgeview_background" format="color" />
+        <attr name="bar_icon_margin" format="dimension" />
+
+
+    </declare-styleable>
+
+</resources>

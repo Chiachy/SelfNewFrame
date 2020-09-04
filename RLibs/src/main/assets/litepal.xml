@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--该文件是管理数据库的配置文件(Litepal)-->
+<litepal>
+
+
+    <dbname value="loveshop" />
+
+    <version value="1" />
+
+    <!--表对应的实体对象,必须是完整路径-->
+    <list>
+        <mapping class="com.common.base.bean.UserInfo" />//用户信息表
+    </list>
+
+    <!--数据库存放外部存储卡-->
+    <storage value="external" />
+
+</litepal>

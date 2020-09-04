@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <color name="update_white">#FFFFFF</color>
+
+
+   <color name="update_title_text_color">#1875f0</color>
+   <color name="update_title_text_info_color">#53575a</color>
+   <color name="update_ok_button_bg">#1875f0</color>
+   <color name="update_no_button_bg">#808080</color>
+
+</resources>
